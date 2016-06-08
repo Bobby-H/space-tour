@@ -5,19 +5,18 @@
     <link href='css/bootstrap.min.css' rel='stylesheet'>
     <link href='css/main.css' rel='stylesheet'>
   </head>
-
   <body>
-    <div class="navbar navbar-pills">
+    <div class='navbar navbar-default navbar-static-top'>
       <div class='container'>
-        <a href="index.html" class="navbar navbar-brand">Blasting Off with Bootstrap</a>
-        <ul class="navbar navbar-nav navbar-static-top nav nav-navbar navbar-right">
+        <a href='/' class='navbar-brand'>Blasting Off With Bootstrap</a>
+
+        <ul class='nav navbar-nav navbar-right'>
           <li><a href='tickets.html'>Tickets</a></li>
           <li><a href='stations.html'>Stations</a></li>
           <li><a href='about.html'>About</a></li>
         </ul>
       </div>
     </div>
-
     <div class='container'>
       <div class='row well well-lg'>
         <div class='col-md-6'>
@@ -97,6 +96,32 @@
         </div>
       </div>
     </div>
+
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-10 col-md-offset-1'>
+          <h2>Plan Your Trip Today!</h2>
+          <ul class="nav nav-tabs">
+            <li class="active"><a href='#time'>Today's Times</a></li>
+            <li class="active"><a href='#deals'>Hot Deals</a></li>
+            <li class="active"><a href='#forecast'>Forecast</a></li>
+          </ul>
+
+          <div class='tab-content'>
+            <div class='tab-pane fade active' id='time'>
+              <p>Today's Time here</p>
+            </div>
+            <div class='tab-pane fade active' id='deals'>
+              <p>Deals here</p>
+            </div>
+            <div class='tab-pane fade active' id='forecast'>
+              <p>Forecast</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class='footer'>
       <div class='container'>
         <div class='row'>
@@ -109,7 +134,7 @@
           <div class='col-md-offset-1 col-sm-2 col-xs-6'>
             <h4>Links</h4>
             <ul class='list-unstyled'>
-              <li><a href='index.html'>Home</a></li>
+              <li><a href='/'>Home</a></li>
               <li><a href='tickets.html'>Tickets</a></li>
               <li><a href='stations.html'>Stations</a></li>
             </ul>
@@ -143,5 +168,13 @@
 
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
     <script src='js/bootstrap.min.js'></script>
+    <script>
+      $(function() {
+        $('.nav-tabs a').click(function (e) {
+          e.preventDefault();
+          $(this).tab('show');
+        });
+      });
+    </script>
   </body>
 </html>
